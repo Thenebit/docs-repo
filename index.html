@@ -17,6 +17,87 @@
     </header>
 
   <!-- GRID -->
+    <div class="grid">
+
+        <!-- DAILY WORKFLOW -->
+        <div class="card green wide">
+        <div class="card-label">01 — Daily Workflow</div>
+        <h2>The Flow Every Developer Follows</h2>
+        <div class="code-block">
+            <div class="line"><span class="ln">1</span><span class="comment"># Always start fresh from main</span></div>
+            <div class="line"><span class="ln">2</span><span class="cmd">git checkout <span class="g">main</span></span></div>
+            <div class="line"><span class="ln">3</span><span class="cmd">git pull origin <span class="g">main</span></span></div>
+            <div class="line"><span class="ln">4</span><span class="comment">&nbsp;</span></div>
+            <div class="line"><span class="ln">5</span><span class="comment"># Create your branch</span></div>
+            <div class="line"><span class="ln">6</span><span class="cmd">git checkout -b <span class="c">feature/your-feature-name</span></span></div>
+            <div class="line"><span class="ln">7</span><span class="comment">&nbsp;</span></div>
+            <div class="line"><span class="ln">8</span><span class="comment"># Stage & commit your work</span></div>
+            <div class="line"><span class="ln">9</span><span class="cmd">git add .</span></div>
+            <div class="line"><span class="ln">10</span><span class="cmd">git commit -m <span class="y">"feat: add user auth endpoint"</span></span></div>
+            <div class="line"><span class="ln">11</span><span class="comment">&nbsp;</span></div>
+            <div class="line"><span class="ln">12</span><span class="comment"># Push & open a Pull Request</span></div>
+            <div class="line"><span class="ln">13</span><span class="cmd">git push origin <span class="c">feature/your-feature-name</span></span></div>
+            <div class="line"><span class="ln">14</span><span class="comment"># Go to GitHub -> Open PR -> Request review -> Merge</span></div>
+        </div>
+        </div>
+
+        <!-- BRANCH NAMING -->
+        <div class="card cyan">
+        <div class="card-label">02 — Branches</div>
+        <h2>Branch Naming</h2>
+        <div class="steps">
+            <div class="step"><div class="step-num">F</div><div class="step-text"><code>feature/user-auth</code> — new feature</div></div>
+            <div class="step"><div class="step-num">B</div><div class="step-text"><code>fix/login-redirect</code> — bug fix</div></div>
+            <div class="step"><div class="step-num">H</div><div class="step-text"><code>hotfix/api-crash</code> — urgent fix</div></div>
+            <div class="step"><div class="step-num">E</div><div class="step-text"><code>experiment/new-model</code> — ML / R&D</div></div>
+            <div class="step"><div class="step-num">D</div><div class="step-text"><code>docs/update-readme</code> — docs only</div></div>
+        </div>
+        </div>
+
+        <!-- COMMIT CONVENTION -->
+        <div class="card yellow">
+        <div class="card-label">03 — Commits</div>
+        <h2>Commit Convention</h2>
+        <div class="commit-list">
+            <div class="commit-row"><span class="tag feat">feat:</span><span class="commit-desc">new feature added</span></div>
+            <div class="commit-row"><span class="tag fix">fix:</span><span class="commit-desc">bug or error fixed</span></div>
+            <div class="commit-row"><span class="tag docs">docs:</span><span class="commit-desc">documentation only</span></div>
+            <div class="commit-row"><span class="tag refactor">refactor:</span><span class="commit-desc">code restructure, no behavior change</span></div>
+            <div class="commit-row"><span class="tag test">test:</span><span class="commit-desc">adding or fixing tests</span></div>
+            <div class="commit-row"><span class="tag chore">chore:</span><span class="commit-desc">configs, deps, tooling</span></div>
+        </div>
+        </div>
+
+        <!-- ENV FILE -->
+        <div class="card red wide">
+        <div class="card-label">04 — Secrets & Environment</div>
+        <h2>.env Rules — No Exceptions</h2>
+        <div class="env-split">
+            <div class="env-box bad">
+            <div class="label">❌ Never commit this</div>
+            <code>.env</code>
+            <code>DATABASE_URL=postgres://real:pass@host/db</code>
+            <code>SECRET_KEY=my-super-secret-123</code>
+            <code>API_KEY=sk-live-abc123xyz</code>
+            <br/>
+            <code class="muted"># real credentials = instant security risk</code>
+            </div>
+            <div class="env-box good">
+            <div class="label">✅ Always commit this</div>
+            <code>.env.example</code>
+            <code>DATABASE_URL=your-database-url-here</code>
+            <code>SECRET_KEY=your-secret-key-here</code>
+            <code>API_KEY=your-api-key-here</code>
+            <br/>
+            <code class="muted"># placeholder values only — safe to push</code>
+            </div>
+        </div>
+        <div class="rule-banner">
+            🔴 &nbsp; <strong>.env is in .gitignore — always.</strong> &nbsp; New dev? Run: <code style="color:#fff;background:rgba(255,255,255,0.08);padding:0.1rem 0.4rem;border-radius:3px;margin-left:0.3rem;">cp .env.example .env</code> &nbsp; then fill in your own values.
+        </div>
+        </div>
+
+    </div>
 
   <!-- FOOTER -->
 

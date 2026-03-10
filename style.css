@@ -282,6 +282,21 @@ body {
   gap: 0.6rem;
 }
 
+/* ── FOOTER ── */
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.footer span {
+  color: var(--green);
+}
+
 /* ── ANIMATIONS ── */
 @keyframes fadeDown {
   from { opacity: 0; transform: translateY(-12px); }

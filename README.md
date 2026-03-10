@@ -1,2 +1,2 @@
 # docs-repo
-Engineer standard to be observed
+Engineer standard that must observed.

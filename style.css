@@ -1,13 +1,93 @@
-/* Dev Workflow Guide — Styles */
-
 /* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ── VARIABLES ── */
+:root {
+  --bg: #0a0c0f;
+  --surface: #111418;
+  --surface2: #181d23;
+  --border: #1f2730;
+  --green: #3ddc84;
+  --cyan: #5dd8ff;
+  --yellow: #f5c542;
+  --red: #ff5f57;
+  --orange: #ff8c42;
+  --text: #cdd6e0;
+  --muted: #4a5568;
+  --bright: #eef2f7;
+}
 
 /* ── BODY ── */
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+  padding: 2rem 1rem 4rem;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(61,220,132,0.07) 0%, transparent 60%),
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.015) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.015) 40px);
+}
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+}
 
 /* ── HEADER ── */
+.header {
+  text-align: center;
+  padding: 3rem 0 2.5rem;
+  position: relative;
+}
 
-/* ── GRID ── */
+.header::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 3rem;
+  background: linear-gradient(to bottom, transparent, var(--green));
+  margin: 0 auto 1.5rem;
+}
 
-/* ── FOOTER ── */
+.badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--green);
+  border: 1px solid rgba(61,220,132,0.3);
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 1.2rem;
+  animation: fadeDown 0.6s ease both;
+}
+
+.header h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--bright);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  animation: fadeDown 0.6s 0.1s ease both;
+}
+
+.header h1 span { color: var(--green); }
+
+.header p {
+  margin-top: 0.9rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  animation: fadeDown 0.6s 0.2s ease both;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

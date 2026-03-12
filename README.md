@@ -11,7 +11,6 @@ branch naming convention, commit message standards, and environment variable rul
 
 ## Usage
 Open `index.html` directly in your browser — no build step needed.
-or click https://thenebit.github.io/docs-repo/
 
 ## Stack
 HTML · CSS · No dependencies
